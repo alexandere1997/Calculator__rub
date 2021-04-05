@@ -55,6 +55,11 @@ componentDidMount() {
             array: ArrMass
         }
     })
+
+    if(localStorage.getItem('name') == null) {
+        const { name, valueS, valuePrice, array } = this.state;
+        this.setState({ name, valueS, valuePrice, array});
+    }
 }
 itemsClick = (e) => {
       this.setState((state) => {
@@ -204,5 +209,3 @@ funcPriceValue = (event) => {
       )
   }
 }
-
-
